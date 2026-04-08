@@ -7,7 +7,7 @@
 
 ¡Bienvenidos al equipo de **HotelBook**! Acaban de incorporarse como **desarrolladores junior**. El equipo anterior dejó el sistema con varios bugs, mensajería mal configurada, una race condition, falta de idempotencia y un servicio sin terminar.
 
-Su trabajo durante las próximas ~36 horas: **diagnosticar, arreglar y completar** el sistema, y entregar evidencia de que funciona end-to-end.
+Su trabajo durante las próximas horas: **diagnosticar, arreglar y completar** el sistema, y entregar evidencia de que funciona end-to-end.
 
 Antes de empezar, **lean `INSTRUCCIONES.md`**. Ahí está la lista completa de tareas, divididas en tiers, con pistas claras sobre dónde buscar.
 

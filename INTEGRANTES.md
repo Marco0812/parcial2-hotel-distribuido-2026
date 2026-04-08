@@ -4,10 +4,10 @@
 
 ## Integrante 1
 
-- **Nombre completo:**
-- **Matrícula:**
-- **Correo:**
-- **Usuario de Git que va a usar para sus commits:**
+- **Nombre completo: Marco Uriel Castaneda-Avila**
+- **Matrícula: 196837**
+- **Correo: 196837@iberopuebla.mx**
+- **Usuario de Git que va a usar para sus commits: Marco0812**
 
 ## Integrante 2
 

@@ -36,7 +36,7 @@
 | Capturas de RabbitMQ | | |
 | Logs end-to-end | | |
 | `DECISIONES.md` |Marco| |
-| `PROMPTS.md` | | |
+| `PROMPTS.md` |Marco| |
 | (otro) | | |
 
 ---

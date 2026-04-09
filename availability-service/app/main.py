@@ -98,8 +98,12 @@ def callback(ch, method, properties, body):
             properties=pika.BasicProperties(content_type="application/json"),
         )
         logger.info("Publicado %s para %s", routing_key, booking_id)
+        # Confirmación manual del mensaje después de procesar exitosamente. Si algo falla antes de esta línea, el mensaje no se marca como entregado y se reintentará.
+        ch.basic_ack(delivery_tag=method.delivery_tag)
     except Exception as exc:
         logger.error("Error procesando %s: %s", booking_id, exc)
+        # Reintento en caso de error (ack negativo con requeue=True). Esto hace que el mensaje vuelva a la cola para ser procesado nuevamente.
+        ch.basic_nack(delivery_tag=method.delivery_tag, requeue=True)
 
 
 def main() -> None:
@@ -115,10 +119,11 @@ def main() -> None:
     # entregado ANTES de que el callback corra. Si crashea a la mitad, el
     # mensaje se pierde. Cambia a auto_ack=False y haz ch.basic_ack(delivery_tag=...)
     # manualmente al final del callback (o basic_nack en caso de error).
+    # ✅✅
     channel.basic_consume(
         queue=result.method.queue,
         on_message_callback=callback,
-        auto_ack=True,
+        auto_ack=False,
     )
     logger.info("availability-service esperando booking.requested...")
     channel.start_consuming()

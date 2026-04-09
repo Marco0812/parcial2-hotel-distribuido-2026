@@ -27,15 +27,15 @@
 | B1 — routing key en booking-api | | |
 | B2 — manejo de error en publish | | |
 | B3 — auto_ack en availability-service | | |
-| B4 — overlap de fechas | | |
-| B5 — race condition con `with_for_update()` | | |
+| B4 — overlap de fechas |Marco| |
+| B5 — race condition con `with_for_update()` |Marco| |
 | B6 — credenciales hardcodeadas | | |
-| B7 — idempotencia en payment-service | | |
+| B7 — idempotencia en payment-service |Marco| |
 | `notification-service` (TODOs) | | |
-| `notification-service` en docker-compose | | |
+| `notification-service` en docker-compose |Marco| |
 | Capturas de RabbitMQ | | |
 | Logs end-to-end | | |
-| `DECISIONES.md` | | |
+| `DECISIONES.md` |Marco| |
 | `PROMPTS.md` | | |
 | (otro) | | |
 

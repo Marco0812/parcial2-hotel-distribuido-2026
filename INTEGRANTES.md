@@ -11,10 +11,10 @@
 
 ## Integrante 2
 
-- **Nombre completo:**
-- **Matrícula:**
-- **Correo:**
-- **Usuario de Git que va a usar para sus commits:**
+- **Nombre completo:** David André Acosta Avila
+- **Matrícula:** 196404
+- **Correo:** 196404@iberopuebla.mx
+- **Usuario de Git que va a usar para sus commits:** spygon9
 
 ---
 
@@ -24,15 +24,15 @@
 
 | Bug / Tarea | Responsable principal | Apoyo |
 |---|---|---|
-| B1 — routing key en booking-api | | |
-| B2 — manejo de error en publish | | |
-| B3 — auto_ack en availability-service | | |
-| B4 — overlap de fechas |Marco| |
-| B5 — race condition con `with_for_update()` |Marco| |
-| B6 — credenciales hardcodeadas | | |
-| B7 — idempotencia en payment-service |Marco| |
-| `notification-service` (TODOs) | | |
-| `notification-service` en docker-compose |Marco| |
+| B1 — routing key en booking-api | David | |
+| B2 — manejo de error en publish | David | |
+| B3 — auto_ack en availability-service | David | |
+| B4 — overlap de fechas | | |
+| B5 — race condition con `with_for_update()` | Marco | |
+| B6 — credenciales hardcodeadas | David | |
+| B7 — idempotencia en payment-service | Marco | |
+| `notification-service` (TODOs) | David | |
+| `notification-service` en docker-compose | Marco | |
 | Capturas de RabbitMQ | | |
 | Logs end-to-end | | |
 | `DECISIONES.md` |Marco| |

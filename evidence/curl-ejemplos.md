@@ -18,3 +18,13 @@
   ## Respuesta 
 
   `{"booking_id":"1d524cf8-c257-409e-9248-618c5059bed5","status":"REQUESTED"}`
+
+# Curl de error
+
+`curl -X POST http://localhost:8000/bookings \
+  -H "Content-Type: application/json" \
+  -d '{"guest": "Smith", "room_type": "single", "check_in": "2026-05-10", "check_out": "2026-05-05"}'`
+
+  ## Respuesta 
+
+  `{"detail":"check_out debe ser posterior a check_in"}`

@@ -33,10 +33,10 @@
 | B7 — idempotencia en payment-service | Marco | |
 | `notification-service` (TODOs) | David | |
 | `notification-service` en docker-compose | Marco | |
-| Capturas de RabbitMQ | | |
-| Logs end-to-end | | |
+| Capturas de RabbitMQ | David | |
+| Logs end-to-end | David | Marco |
 | `DECISIONES.md` |Marco| |
-| `PROMPTS.md` |Marco| |
+| `PROMPTS.md` |Marco| David |
 | (otro) | | |
 
 ---
@@ -45,8 +45,8 @@
 
 > Llenen esto al terminar. Una o dos frases por integrante explicando qué cosas hicieron principalmente. La idea no es competir, es que quede claro que ambos participaron.
 
-### Lo que hizo Integrante 1
-
+### Lo que hizo David
+Me encargué principalmente del Tier 1, lo que viene siendo B1, B2, B3 y B6, realicé los TODOs, pequeñas correcciones en otras partes de código y de subir las evidencias solicitdas.
 
 ### Lo que hizo Marco
 Yo me encargue de realizar principalmente el Tier 2, en este caso el B4: Overlap de fechas, B5: race condition con with_for_update() y B7:Idempotencia, ademas agregue el notification-service al docker-compose.yml, llene Decisiones.md y los prompts que use en claude.ai en PROMPTS.md.

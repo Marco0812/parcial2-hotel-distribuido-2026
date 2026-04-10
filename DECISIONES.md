@@ -54,10 +54,15 @@ Porque las credenciales quedan expuestas a quien sea, además de que no se puede
 ## notification-service completado
 
 **Qué TODOs había:**
+Dentro del proyecto había 3 TODOs, declarar el exchange hotel y bindear una queue para payment.completed y payment.failed, implementar el callback que loggee de forma estructurada el "envío" de la notificación e iniciar el consumer con channel.basic_consume(...) y channel.start_consuming()
 
 **Cómo los implementé:**
+En el TODO 1 se declaró el exchange de 'hotel', se creó una queue de 'notifications' y dos bindings el de 'payment.completed' y 'payment.failed'. 
+En el TODO 2 se implementó un ack manual para asegurar que el mensaje se marca como entregado después de que se procese de forma correcta.
+En el TODO 3 se realizó el consumer sobre la queue de 'notifications' y utiliza el callback definido anteriormente para procesar los mensajes entrantes.
 
 **Decisiones de diseño que tomé:**
+Que fuera una sola queue con las dos bindings ya que los eventos de 'payment.completed' y 'payment.failed' se llevan a cabo de la misma manera.
 
 ---
 

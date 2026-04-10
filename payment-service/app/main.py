@@ -10,7 +10,8 @@ import random
 
 import aio_pika
 
-from .db import Payment, SessionLocal, init_db
+from .db import Payment, SessionLocal, init_db, ProcessedEvent
+from sqlalchemy.exc import IntegrityError
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(name)s %(levelname)s %(message)s")
 logger = logging.getLogger("payment-service")

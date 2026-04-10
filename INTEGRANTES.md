@@ -48,8 +48,8 @@
 ### Lo que hizo Integrante 1
 
 
-### Lo que hizo Integrante 2
-
+### Lo que hizo Marco
+Yo me encargue de realizar principalmente el Tier 2, en este caso el B4: Overlap de fechas, B5: race condition con with_for_update() y B7:Idempotencia, ademas agregue el notification-service al docker-compose.yml, llene Decisiones.md y los prompts que use en claude.ai en PROMPTS.md.
 
 ---
 

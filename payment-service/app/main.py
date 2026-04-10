@@ -10,7 +10,8 @@ import random
 
 import aio_pika
 
-from .db import Payment, SessionLocal, init_db
+from .db import Payment, SessionLocal, init_db, ProcessedEvent
+from sqlalchemy.exc import IntegrityError
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(name)s %(levelname)s %(message)s")
 logger = logging.getLogger("payment-service")
@@ -38,18 +39,30 @@ async def process_event(payload: dict) -> tuple[bool, str]:
     # cobrar dos veces. Necesitas chequear si el booking_id ya fue procesado
     # antes de cobrar. Una opción simple: una tabla processed_events(event_id PK)
     # y tratar de insertarlo al inicio; si ya existe, saltar el cobro.
+    async with SessionLocal() as session:
+        try:
+            session.add(ProcessedEvent(event_id=booking_id))
+            await session.flush()
+        except  IntegrityError:
+            await session.rollback()
+            logger.info(
+                "Evento %s ya procesado, omitiendo cobro(idempotencia", booking_id
+            )
+            return True, ""
+        await session.commit()
+
     success, reason = await charge_payment(payload)
 
     async with SessionLocal() as session:
         session.add(
             Payment(
-                booking_id=booking_id,
+                booking_id = booking_id,
                 amount=amount,
                 status="COMPLETED" if success else "FAILED",
             )
         )
         await session.commit()
-
+        
     if success:
         logger.info("Pago COMPLETADO booking=%s monto=%d", booking_id, amount)
     else:

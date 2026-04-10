@@ -66,6 +66,14 @@ services:
       rabbitmq:
         condition: service_healthy
 
+# ── Notificaciones (notification-service) ───────────────
+  notification-service:
+    build: ./notification-service
+    env_file: .env
+    restart: on-failure
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
   # NOTA: notification-service NO está aquí. Tú debes agregarlo
   # como parte del Tier 1. Mira la carpeta notification-service/
   # y replica el patrón de los otros servicios.

@@ -4,10 +4,10 @@
 
 ## Integrante 1
 
-- **Nombre completo: Marco Uriel Castaneda-Avila**
-- **Matrícula: 196837**
-- **Correo: 196837@iberopuebla.mx**
-- **Usuario de Git que va a usar para sus commits: Marco0812**
+- **Nombre completo:** Marco Uriel Castaneda-Avila
+- **Matrícula:** 196837
+- **Correo:** 196837@iberopuebla.mx
+- **Usuario de Git que va a usar para sus commits:** Marco0812
 
 ## Integrante 2
 
@@ -28,15 +28,15 @@
 | B2 — manejo de error en publish | David | |
 | B3 — auto_ack en availability-service | David | |
 | B4 — overlap de fechas | | |
-| B5 — race condition con `with_for_update()` | | |
+| B5 — race condition con `with_for_update()` | Marco | |
 | B6 — credenciales hardcodeadas | David | |
-| B7 — idempotencia en payment-service | | |
+| B7 — idempotencia en payment-service | Marco | |
 | `notification-service` (TODOs) | David | |
-| `notification-service` en docker-compose | | |
+| `notification-service` en docker-compose | Marco | |
 | Capturas de RabbitMQ | | |
 | Logs end-to-end | | |
-| `DECISIONES.md` | | |
-| `PROMPTS.md` | | |
+| `DECISIONES.md` |Marco| |
+| `PROMPTS.md` |Marco| |
 | (otro) | | |
 
 ---
@@ -48,8 +48,8 @@
 ### Lo que hizo Integrante 1
 
 
-### Lo que hizo Integrante 2
-
+### Lo que hizo Marco
+Yo me encargue de realizar principalmente el Tier 2, en este caso el B4: Overlap de fechas, B5: race condition con with_for_update() y B7:Idempotencia, ademas agregue el notification-service al docker-compose.yml, llene Decisiones.md y los prompts que use en claude.ai en PROMPTS.md.
 
 ---
 

@@ -11,9 +11,9 @@
 
 ## ¿Quién la usó?
 
-- [ ] Integrante 1
-- [ ] Integrante 2
-- [V] Ambos
+- [ ] David
+- [V] Marco
+- [ ] Ambos
 
 ---
 
@@ -41,6 +41,7 @@ Listen los 3-5 prompts más importantes que escribieron y para qué los usaron.
    **Para qué:** Entender el patro de tabla processed_events para el fix de B7 en el payment-service
    **Quién lo usó:** Marco
    **Qué tan útil fue:** 3
+    
 
 ### ¿En qué partes los apoyó?
 (Ej: explicación de `with_for_update()`, generación de boilerplate del notification-service, debugging de un error de aio-pika...)
@@ -58,8 +59,9 @@ Listen los 3-5 prompts más importantes que escribieron y para qué los usaron.
 
 ### ¿Qué decidieron hacer manualmente sin IA y por qué?
 
-- La identificaciones de los bugss se hizo leyendo el codigo directamente, los comentarios de #BUG, sirvieron como guia y apoyo
+- La identificaciones de los bugs se hizo leyendo el codigo directamente, los comentarios de #BUG, sirvieron como guia y apoyo
 - El diseno del modelo ProcessedEvent y decidir en que punto exacto del flujo insertarlo(antes del cobro, no despues)
 - La seccion de Decisiones.md se uso las palabras de cada uno ayudandonos de los apoyos de los bugs
 - La integracion del notifaction-service en el docker-compose.yml
+- Los gran mayoría de los bugs fueron realizados sin IA debido a que estaban bastante claras las formas de resolverlos.
 
